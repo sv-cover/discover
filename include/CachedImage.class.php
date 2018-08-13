@@ -122,6 +122,9 @@ class CachedImage
         else
             return false;
 
+        $imagick->setBackgroundColor('#ffffff'); 
+        $imagick = $imagick->mergeImageLayers(Imagick::LAYERMETHOD_FLATTEN);
+
         $cur_height = $imagick->getImageHeight();
         $cur_width = $imagick->getImageWidth();
 
@@ -155,7 +158,7 @@ class CachedImage
         $imagick->setColorspace(Imagick::COLORSPACE_SRGB);
         $imagick->setImageFormat('jpeg');
         $imagick->writeImage( $filename );
-        $imagick->destroy();
+        $imagick->clear();
         
         chgrp($filename, LINUX_GROUP_NAME);
 
