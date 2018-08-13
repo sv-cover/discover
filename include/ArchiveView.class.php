@@ -46,7 +46,9 @@ class ArchiveView extends TemplateView
     }
 
     /** Returns array with all visible files and folders within a folder */
-    protected function list_folder($dir) {
+    protected function list_folder($dir, $root=null) {
+        if (!$root)
+            $root = $this->root;
         $dir .= DIRECTORY_SEPARATOR;
         $output = [];
         foreach (glob($dir.'[!_]*') as $item){
@@ -56,7 +58,7 @@ class ArchiveView extends TemplateView
                 $output[] = array_merge(
                     [
                         'type' => is_dir($item) ? 'dir' : 'file',
-                        'path' => urlencode_path($item, $this->root),
+                        'path' => urlencode_path($item, $root),
                     ],
                     $info
                 );

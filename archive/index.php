@@ -14,7 +14,7 @@ class DisCoverArchiveView extends ArchiveView
         return array_merge(
             parent::get_default_context(),
             [
-                'brainstorms' => array_reverse($this->list_folder(BRAINSTORM_ARCHIVE)),
+                'brainstorms' => array_reverse($this->list_folder(BRAINSTORM_ARCHIVE, BRAINSTORM_ARCHIVE)),
             ]
         );
     }
