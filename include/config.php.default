@@ -3,3 +3,4 @@ define('DISCOVER_ARCHIVE', '');
 define('CACHE_ROOT', '');
 define('ALLOWED_EXTENSIONS', ['pdf']);
 
+define('THUMBNAIL_WIDTH', 800);
