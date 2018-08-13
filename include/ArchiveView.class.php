@@ -39,7 +39,7 @@ class ArchiveView extends TemplateView
             'title' => $this->title,
             'page_id' => $this->page_id,
             'index' => $this->get_index(),
-            'magazines' => $this->list_folder($path),
+            'magazines' => array_reverse($this->list_folder($path)),
             'path' => urlencode_path($path, $this->root),
         ];
     }
