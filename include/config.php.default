@@ -1,5 +1,6 @@
 <?php
 define('DISCOVER_ARCHIVE', '');
+define('BRAINSTORM_ARCHIVE', '');
 define('CACHE_ROOT', '');
 define('ALLOWED_EXTENSIONS', ['pdf']);
 
