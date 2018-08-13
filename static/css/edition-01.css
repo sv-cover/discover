@@ -37,7 +37,7 @@ body#edition-01 {
 #edition-01 .btn.btn-primary:focus {
     color: white;
     text-shadow: 0 0 1em black;
-
+    background: none;
 }
 
 #edition-01 .container{

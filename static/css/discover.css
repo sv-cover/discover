@@ -73,7 +73,9 @@ h1.discover strong {
 .hero .btn.btn-link:visited,
 .hero .btn.btn-primary,
 .hero .btn.btn-primary:visited {
-    padding: .25em 1.5em;
+    height: 2em;
+    vertical-align: middle;
+    padding: .12em 1.5em;
 
     font-size: 1em;
     font-weight: 400;
@@ -83,7 +85,7 @@ h1.discover strong {
 .hero .btn.btn-primary,
 .hero .btn.btn-primary:visited {
     border-radius: 1em;
-    border-width: 2px;
+    border-width: .2em;
     border-style: solid;
 }
 
