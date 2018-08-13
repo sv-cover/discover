@@ -1,0 +1,184 @@
+body,html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding-top: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+}
+
+h1.discover {
+    font-weight: 200;
+}
+
+h1.discover strong {
+    font-weight: 500;
+}
+
+/*********************************
+ * Hero page
+ *********************************/
+
+
+.hero {
+    height: 100%;
+    width: 100%;
+}
+
+.hero a,
+.hero a:visited{
+    color: currentColor;
+    text-decoration: underline;
+}
+
+.hero a:hover,
+.hero a:focus{
+    color: currentColor;
+    opacity: .7;
+}
+
+.hero .container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero .call-to-action {
+    margin-top: 2.5em;
+}
+
+.hero .call-to-action .btn,
+.hero .call-to-action .devider {
+    display: block;
+}
+
+.hero .call-to-action .devider {
+    font-size: .75em;
+    margin-top: 1em;
+}
+
+.hero .call-to-action .btn + .btn {
+    margin-top: .5em;
+}
+
+.hero .btn.btn-link,
+.hero .btn.btn-link:visited,
+.hero .btn.btn-primary,
+.hero .btn.btn-primary:visited {
+    padding: .25em 1.5em;
+
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: none;
+    /*text-transform: uppercase;*/
+}
+
+.hero .btn.btn-primary,
+.hero .btn.btn-primary:visited {
+    border-radius: 1em;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.hero .btn.btn-primary:hover {
+    background: none;
+    opacity: 1;
+}
+
+.hero .btn.btn-link,
+.hero .btn.btn-link:visited {
+    text-decoration: underline;
+}
+
+.hero .btn.btn-link:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.hero .btn.btn-link:focus,
+.hero .btn.btn-primary:focus {
+    box-shadow: none;
+    opacity: 1;
+}
+
+.hero .btn.btn-link:active,
+.hero .btn.btn-primary:active {
+    opacity: .8;
+}
+
+/*********************************
+ * Hero navbar overrides
+ *********************************/
+
+    
+.hero nav.navbar-cover .navbar-header {
+    float:left;
+}
+
+.hero nav.navbar-cover div.navbar-collapse {
+    width: auto;
+    margin: 0;
+    float: right;
+    height: 48px;
+}
+
+.hero nav.navbar-cover div.navbar-collapse > ul.navbar-right {
+    margin: 0 -1.1rem 0 0;
+    top: -1px;
+    position: relative;
+}
+
+.hero nav.navbar-cover div.navbar-collapse > ul > li.active {
+    border-left: none;
+    border-bottom: 3px solid white;
+}
+
+.hero nav.navbar-cover div.navbar-collapse > ul > li {
+    display: inline-block;
+    vertical-align: top;
+    line-height: inherit;
+    height: 48px;
+}
+.hero nav.navbar-cover div.navbar-collapse > ul > li:hover {
+    background: none;
+}
+
+.hero nav.navbar-cover div.navbar-collapse > ul > li > a,
+.hero nav.navbar-cover div.navbar-collapse > ul > li.active a {
+    width: auto;
+    padding: 0 1.1rem;
+    text-decoration: underline;
+}
+
+.hero nav.navbar-cover div.navbar-collapse > ul > li > a:hover {
+    text-decoration: none;
+}
+
+
+@media (max-width: 400px) {
+    .hero nav.navbar-cover a.navbar-logo {
+        display: inline-block;
+    }
+}
+  
+@media (min-width: 768px) {
+    .hero nav.navbar-cover div.navbar-collapse {
+        height: 64px;
+    }
+
+    .hero nav.navbar-cover div.navbar-collapse > ul.navbar-right {
+        top:0;
+    }
+
+    .hero nav.navbar-cover div.navbar-collapse > ul > li {
+        height: 64px;
+    }
+}
+
