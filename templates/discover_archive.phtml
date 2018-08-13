@@ -1,0 +1,21 @@
+<?php $this->extends('layout.phtml') ?>
+
+<?php $this->begin('content') ?>
+<div class="container container-archive">
+    <header>
+        <h1>DisCover Archive</h1>
+    </header>
+    <ul class="list-unstyled archive">
+        <?php foreach ($magazines as $item): ?>
+            <?php if ($item['type'] === 'file'): ?>
+                <li>
+                    <a href="?magazine=<?= $this->attr($item['path']) ?>" class="magazine">
+                        <img src="?magazine=<?= $this->attr($item['path']) ?>&view=thumbnail" alt="First page of <?= $this->attr($item['filename']) ?>">
+                        <span class="name"><?= $this->html($item['filename']) ?></span>
+                    </a>
+                </li>
+            <?php endif ?>
+        <?php endforeach ?>
+    </ul>
+</div>
+<?php $this->end() ?>

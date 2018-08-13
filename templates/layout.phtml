@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobileoptimized" content="0">
+    <title><?php if (!empty($title)):?><?= $title ?> &ndash; <?php endif ?> Cover</title>
+
+    <!-- Include stylesheets -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="//cdl.svcover.nl/dist/v0.1/css/cdl.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/discover.css">
+
+    <?= !empty($styles) ? $styles : ''?>
+</head>
+<body>
+     <!-- Top navigation bar -->
+    <nav class="navbar navbar-cover">
+        <div class="container-fluid">
+            <!-- Branding -->
+            <div class="navbar-header">
+                <!-- Collapse button -->
+                <button class="navbar-toggle collapsed navicon-button" href="#navbar-main-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="navbar-main-collapse">
+                    <span class="navicon navicon-white"></span>
+                </button>
+                <!-- Cover branding -->
+                <a class="navbar-logo" href="//www.svcover.nl/"><img src="//cdl.svcover.nl/dist/v0.1/img/cover.png" alt="Cover"></a>
+                <!-- Lustrum branding -->
+                <a class="navbar-brand" href="/">DisCover</a>
+            </div>
+            <!-- Navigation menu -->
+            <div class="collapse navbar-collapse" id="navbar-main-collapse">
+                <ul class="navbar-right">
+                    <li <?php if ($page_id == 'discover_archive'): ?>class="active"<?php endif ?>>
+                        <a href="/archive/index.php">Archive</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Insert rendered content -->
+    <?= !empty($content) ? $content : ''?>
+
+    <!-- Ìnclude scripts -->
+    <?= !empty($scripts) ? $scripts : ''?>
+</body>
+</html>

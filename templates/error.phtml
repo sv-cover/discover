@@ -1,0 +1,14 @@
+<?php $this->extends('layout.phtml') ?>
+
+<?php $this->begin('content') ?>
+<div id="error" class="container container-narrow">
+    <h1>Error: <?= $this->html($status) ?></h1>
+    <p>
+        <?php if (empty($html_message)): ?>
+            <?= $this->html($message) ?>
+        <?php else: ?>
+            <?= $html_message ?>
+        <?php endif ?>
+    </p>
+</div>
+<?php $this->end() ?>
