@@ -1,65 +1,69 @@
-.edition-01 {
+body#edition-01 {
+    padding-top: 0;
+}
+
+#edition-01 .hero {
     position: relative;
-    background: no-repeat center/cover url('/img/space.jpg');
+    background: no-repeat center/cover url('/static/img/space.jpg');
     color: white;
     overflow: hidden;
 }
 
-.edition-01::before {
+#edition-01 .hero::before {
     content: '';
     display: block;
     height: 100%;
     width: 100%;
-    background: no-repeat 30% 100%/auto 80vh url('/img/MartiniHeavy.png');
+    background: no-repeat 30% 100%/auto 80vh url('/static/img/MartiniHeavy.png');
     transform: rotate(20deg);
     position: absolute;
     z-index: 0;
 }
 
-.edition-01 nav.navbar-cover {
+#edition-01 nav.navbar-cover {
     background: none;
     box-shadow: none;
 }
 
-.edition-01 .btn.btn-primary,
-.edition-01 .btn.btn-primary:visited {
+#edition-01 .btn.btn-primary,
+#edition-01 .btn.btn-primary:visited {
     color: black;
     background: white;
     border-color: white;
     text-shadow: none;
 }
 
-.edition-01 .btn.btn-primary:hover,
-.edition-01 .btn.btn-primary:focus {
+#edition-01 .btn.btn-primary:hover,
+#edition-01 .btn.btn-primary:focus {
     color: white;
     text-shadow: 0 0 1em black;
 
 }
 
-.edition-01 .container{
+#edition-01 .container{
     font-size: 1.5em;
     text-shadow: 0 0 1em black;
     z-index: 10;
 }
 
-.edition-01 .container h1{
+#edition-01 .container h1{
     font-size: 2.5em;
     margin: 0;
     line-height: 0.9em;
 }
 
 @media (min-width: 768px) {
-    .edition-01 .container {
+    #edition-01 .container {
         font-size: 3vw;
     }
 
-    .edition-01 .container h1{
+    #edition-01 .container h1{
         font-size: 5em;
     }
 }
 
 @media (min-width: 1200px) {
-    .edition-01 .container{
+    #edition-01 .container{
         font-size: 2.75em;
     }
 }
