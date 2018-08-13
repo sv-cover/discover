@@ -18,4 +18,22 @@
         <?php endforeach ?>
     </ul>
 </div>
+<div class="container container-archive">
+    <header>
+        <h1>Brainstorm Archive</h1>
+    </header>
+    <p>Before DisCover, Cover had a magazine named the Brainstorm, which adhered to a different format. Archived editions of this magazine can be found below.</p>
+    <ul class="list-unstyled archive">
+        <?php foreach ($brainstorms as $item): ?>
+            <?php if ($item['type'] === 'file'): ?>
+                <li>
+                    <a href="?magazine=<?= $this->attr($item['path']) ?>" class="magazine">
+                        <img src="?magazine=<?= $this->attr($item['path']) ?>&view=thumbnail" alt="First page of <?= $this->attr($item['filename']) ?>">
+                        <span class="name"><?= $this->html($item['filename']) ?></span>
+                    </a>
+                </li>
+            <?php endif ?>
+        <?php endforeach ?>
+    </ul>
+</div>
 <?php $this->end() ?>

@@ -35,13 +35,14 @@ class ArchiveView extends TemplateView
         else
             $path = $this->root;
 
-        return [
-            'title' => $this->title,
-            'page_id' => $this->page_id,
-            'index' => $this->get_index(),
-            'magazines' => array_reverse($this->list_folder($path)),
-            'path' => urlencode_path($path, $this->root),
-        ];
+        return array_merge(
+            parent::get_default_context(),
+            [
+                'index' => $this->get_index(),
+                'magazines' => array_reverse($this->list_folder($path)),
+                'path' => urlencode_path($path, $this->root),
+            ]
+        );
     }
 
     /** Returns array with all visible files and folders within a folder */
