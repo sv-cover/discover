@@ -122,7 +122,7 @@ class CachedImage
         else
             return false;
 
-        $imagick->setBackgroundColor('#ffffff'); 
+        $imagick->setBackgroundColor('#ffffff');
         $imagick = $imagick->mergeImageLayers(Imagick::LAYERMETHOD_FLATTEN);
 
         $cur_height = $imagick->getImageHeight();
